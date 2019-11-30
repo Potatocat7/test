@@ -10,7 +10,7 @@ public class SysResetScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StopButton = GameObject.Find("StopButton").GetComponent<Button>();
+        StopButton = GameObject.Find("StartScene/StopButton").GetComponent<Button>();
     }
 
     // Update is called once per frame

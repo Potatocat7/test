@@ -14,7 +14,7 @@ public class SysSetScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StopButton = GameObject.Find("StopButton").GetComponent<Button>();
+        StopButton = GameObject.Find("StartScene/StopButton").GetComponent<Button>();
         SetClockTimer = GameObject.Find("SetTimeCheck").GetComponent<Text>();       
         SetClockHour = GameObject.Find("TimeHour").GetComponent<InputField>();
         SetClockMinutes = GameObject.Find("TimeMinutes").GetComponent<InputField>();
