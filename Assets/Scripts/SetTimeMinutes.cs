@@ -6,15 +6,14 @@ using UnityEngine.UI;
 
 public class SetTimeMinutes : MonoBehaviour
 {
-    //   private int IntInputField;
-    //private InputField inputField;
-    //private Text text;
+    private InputField inputField;
+    private Text text;
+    private int num;
 
     // Start is called before the first frame update
     void Start()
     {
-        //inputField = GameObject.Find("TimeMinutes").GetComponent<InputField>();
-        //text = text.GetComponent<Text>();
+        inputField = GameObject.Find("TimeMinutes").GetComponent<InputField>();
     }
 
     // Update is called once per frame
@@ -23,22 +22,29 @@ public class SetTimeMinutes : MonoBehaviour
         
     }
 
-      public void InputText()
-      {
-    //      //テキストにinputFieldの内容を反映
-    //      if (IntInputField < 0)
-    //      {
-    //          text.text = 0;
-    //      }
-    //      else if (IntInputField > 23)
-    //      {
-    //          text.text = 23;
-    //      }
-    //      else
-    //      {
-    //          text.text = IntInputField;
-    //      }
-       //text.text = inputField.text;
+    public void SetOnText()
+    {
 
+        //空白時にエラーが出るのでここで0に差し替えておく
+        if (inputField.text == "")
+        {
+            inputField.text = "0";
+        }
+        //テキストにinputFieldの内容を反映
+        num = int.Parse(inputField.text);
+        if (num < 0)
+        {
+            num = 0;
+        }
+        else if (num > 59)
+        {
+            num = 59;
+        }
+        else
+        {
+            //num = 0;
+        }
+        //inputFieldText = inputField.text;
+        inputField.text = num.ToString();
     }
 }

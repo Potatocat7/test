@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class SetTimeHour : MonoBehaviour
 {
-    //private int IntInputField;
     private InputField inputField;
     private Text text;
     private int num;
@@ -14,17 +13,23 @@ public class SetTimeHour : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //inputField = GameObject.Find("SetTimeHour").GetComponent<InputField>();
-        //IntInputField = int.Parse(GameObject.Find("SetTimeHour").GetComponent<InputField>());
-        //inputField = GameObject.Find("TimeHour").GetComponent<InputField>(); 
- //       text = GameObject.Find("TimeHour").GetComponent<Text>();
         inputField = GameObject.Find("TimeHour").GetComponent<InputField>();
     }
 
     // Update is called once per frame
     void Update()
     {
+
+    }
+    public void SetOnText()
+    {
+        //空白時にエラーが出るのでここで0に差し替えておく
+        if (inputField.text == "")
+        {
+            inputField.text = "0";
+        }
         //テキストにinputFieldの内容を反映
+        num = int.Parse(inputField.text);
         if (num < 0)
         {
             num = 0;
@@ -35,15 +40,11 @@ public class SetTimeHour : MonoBehaviour
         }
         else
         {
+            //num = 0;
         }
-        inputField.text = num.ToString();
 
-    }
-    public void InputText()
-    {
-        
         //inputFieldText = inputField.text;
-        num = int.Parse(inputField.text);
+        inputField.text = num.ToString();
     }
 
 }
