@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SysSetScript : MonoBehaviour
 {
@@ -14,5 +15,11 @@ public class SysSetScript : MonoBehaviour
     void Update()
     {
         
+    }
+    //ボタン押下時
+    public void OnClick()
+    {
+        GameObject.Find("SetTimeCheck").GetComponent<Text>().text = "設定";
+        GameObject.Find("SysWindowCanvas").SetActive(false);
     }
 }
