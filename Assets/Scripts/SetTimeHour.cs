@@ -26,7 +26,7 @@ public class SetTimeHour : MonoBehaviour
         //空白時にエラーが出るのでここで0に差し替えておく
         if (inputField.text == "")
         {
-            inputField.text = "0";
+            inputField.text = "00";
         }
         //テキストにinputFieldの内容を反映
         num = int.Parse(inputField.text);
@@ -43,8 +43,14 @@ public class SetTimeHour : MonoBehaviour
             //num = 0;
         }
 
-        //inputFieldText = inputField.text;
-        inputField.text = num.ToString();
+        if (num < 10)
+        {
+            inputField.text = "0" + num.ToString();
+        }
+        else
+        {
+            inputField.text = num.ToString();
+        }
     }
 
 }
