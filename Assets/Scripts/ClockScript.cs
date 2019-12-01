@@ -18,9 +18,22 @@ public class ClockScript : MonoBehaviour
     private Text ClockTimer;
     private Text CountTimerText;
     private int CountTimer;
-    // Start is called before the first frame update
+    private AudioSource sound01;
+    private AudioSource sound02;
+    private AudioSource sound03;
+
     void Start()
     {
+        //AudioSourceコンポーネントを取得し、変数に格納
+        AudioSource[] audioSources = GameObject.Find("StartScene").GetComponents<AudioSource>();
+        sound01 = audioSources[0];
+        sound02 = audioSources[1];
+        sound03 = audioSources[2];
+
+        sound01.Stop();
+        sound02.Stop();
+        sound03.Stop();
+        // Start is called before the first frame update
         CountTimer = 0;
         status = 0;
         CountTimerText = GameObject.Find("CountTimer").GetComponent<Text>();
@@ -42,20 +55,46 @@ public class ClockScript : MonoBehaviour
             StopButton.enabled = true;
             StopButton.interactable = true;
             SetTimer.text = "Start!";
+            sound01.Play();
             //    CountTimerText.SetActive(true);
         }
         if (status == 1)
         {
             CountTimer += 1;
             CountTimerText.text = CountTimer.ToString();
+            if (CountTimer == 50)
+            {
+                status = 2;
+                sound02.Play();
+            }
         }
         else if (status == 2)
         {
             CountTimer += 1;
             CountTimerText.text = CountTimer.ToString();
-            if (CountTimer == 200)
+            if (CountTimer == 100)
             {
                 status = 3;
+                sound03.Play();
+            }
+        }
+        else if (status == 3)
+        {
+            CountTimer += 1;
+            CountTimerText.text = CountTimer.ToString();
+            if (CountTimer == 150)
+            {
+ //               status = 4;
+ //               SceneManager.LoadScene("ResultScene");
+            }
+        }
+        else if (status == 98)
+        {
+            CountTimer += 1;
+            CountTimerText.text = CountTimer.ToString();
+            if (CountTimer == 50)
+            {
+                status = 99;
                 SceneManager.LoadScene("ResultScene");
             }
         }
@@ -63,7 +102,10 @@ public class ClockScript : MonoBehaviour
     //ボタン押下時
     public void OnClick()
     {
-        status = 2;
+        sound01.Stop();
+        sound02.Stop();
+        sound03.Stop();
+        status = 98;
         StopButton.enabled = false;
         StopButton.interactable = false;
         CountTimerText.text = CountTimer.ToString();

@@ -11,7 +11,7 @@ public class ResultButtonScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SceneManager.LoadScene("StartScene");
+        //SceneManager.LoadScene("StartScene");
         ScoreText = GameObject.Find("ResultScene/Text").GetComponent<Text>();
         ScoreText.text = Data.Instance.score.ToString();
         StopButton = GameObject.Find("ResultScene/StopButton").GetComponent<Button>();
