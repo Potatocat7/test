@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 96259265}
   - component: {fileID: 96259264}
   - component: {fileID: 96259269}
-  m_Layer: 4
+  m_Layer: 1
   m_Name: SysWindowCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -253,7 +253,7 @@ GameObject:
   - component: {fileID: 152692523}
   - component: {fileID: 152692522}
   - component: {fileID: 152692521}
-  m_Layer: 4
+  m_Layer: 1
   m_Name: SetTimeCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -344,7 +344,7 @@ GameObject:
   - component: {fileID: 214675508}
   - component: {fileID: 214675507}
   - component: {fileID: 214675510}
-  m_Layer: 4
+  m_Layer: 1
   m_Name: TimeMinutes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -501,7 +501,7 @@ GameObject:
   - component: {fileID: 275236662}
   - component: {fileID: 275236664}
   - component: {fileID: 275236663}
-  m_Layer: 4
+  m_Layer: 1
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -578,7 +578,7 @@ GameObject:
   - component: {fileID: 324328941}
   - component: {fileID: 324328943}
   - component: {fileID: 324328942}
-  m_Layer: 4
+  m_Layer: 1
   m_Name: CountTimer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -635,7 +635,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: 
 --- !u!222 &324328943
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -655,7 +655,7 @@ GameObject:
   - component: {fileID: 352787644}
   - component: {fileID: 352787646}
   - component: {fileID: 352787645}
-  m_Layer: 4
+  m_Layer: 1
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -732,7 +732,7 @@ GameObject:
   - component: {fileID: 360181713}
   - component: {fileID: 360181715}
   - component: {fileID: 360181714}
-  m_Layer: 4
+  m_Layer: 1
   m_Name: Placeholder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -809,7 +809,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
-  m_Layer: 4
+  m_Layer: 1
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -957,7 +957,7 @@ GameObject:
   - component: {fileID: 698369449}
   - component: {fileID: 698369451}
   - component: {fileID: 698369450}
-  m_Layer: 4
+  m_Layer: 1
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1037,7 +1037,7 @@ GameObject:
   - component: {fileID: 757294613}
   - component: {fileID: 757294612}
   - component: {fileID: 757294616}
-  m_Layer: 4
+  m_Layer: 1
   m_Name: SysWindowPopButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1186,7 +1186,7 @@ GameObject:
   - component: {fileID: 825094863}
   - component: {fileID: 825094862}
   - component: {fileID: 825094865}
-  m_Layer: 4
+  m_Layer: 1
   m_Name: StopButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1324,7 +1324,7 @@ GameObject:
   - component: {fileID: 882233510}
   - component: {fileID: 882233509}
   - component: {fileID: 882233512}
-  m_Layer: 4
+  m_Layer: 1
   m_Name: TimeHour
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1481,7 +1481,7 @@ GameObject:
   - component: {fileID: 981530078}
   - component: {fileID: 981530080}
   - component: {fileID: 981530079}
-  m_Layer: 4
+  m_Layer: 1
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1562,7 +1562,7 @@ GameObject:
   - component: {fileID: 1000208586}
   - component: {fileID: 1000208589}
   - component: {fileID: 1000208588}
-  m_Layer: 4
+  m_Layer: 1
   m_Name: StartScene
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1954,7 +1954,7 @@ GameObject:
   - component: {fileID: 1052478412}
   - component: {fileID: 1052478414}
   - component: {fileID: 1052478413}
-  m_Layer: 4
+  m_Layer: 1
   m_Name: StartBackImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2026,7 +2026,7 @@ GameObject:
   - component: {fileID: 1565733090}
   - component: {fileID: 1565733092}
   - component: {fileID: 1565733091}
-  m_Layer: 4
+  m_Layer: 1
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2103,7 +2103,7 @@ GameObject:
   - component: {fileID: 1584187445}
   - component: {fileID: 1584187447}
   - component: {fileID: 1584187446}
-  m_Layer: 4
+  m_Layer: 1
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2182,7 +2182,7 @@ GameObject:
   - component: {fileID: 1658954283}
   - component: {fileID: 1658954282}
   - component: {fileID: 1658954285}
-  m_Layer: 4
+  m_Layer: 1
   m_Name: SetButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2318,7 +2318,7 @@ GameObject:
   - component: {fileID: 1750624474}
   - component: {fileID: 1750624476}
   - component: {fileID: 1750624475}
-  m_Layer: 4
+  m_Layer: 1
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2397,7 +2397,7 @@ GameObject:
   - component: {fileID: 1787783450}
   - component: {fileID: 1787783449}
   - component: {fileID: 1787783448}
-  m_Layer: 4
+  m_Layer: 1
   m_Name: CancelButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2534,7 +2534,7 @@ GameObject:
   - component: {fileID: 1954976122}
   - component: {fileID: 1954976121}
   - component: {fileID: 1954976123}
-  m_Layer: 4
+  m_Layer: 1
   m_Name: StartBackImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2618,7 +2618,7 @@ GameObject:
   - component: {fileID: 2035237036}
   - component: {fileID: 2035237035}
   - component: {fileID: 2035237034}
-  m_Layer: 4
+  m_Layer: 1
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2707,7 +2707,7 @@ GameObject:
   - component: {fileID: 2066755108}
   - component: {fileID: 2066755110}
   - component: {fileID: 2066755109}
-  m_Layer: 4
+  m_Layer: 1
   m_Name: Placeholder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
