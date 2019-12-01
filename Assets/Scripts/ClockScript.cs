@@ -8,16 +8,17 @@ using UnityEngine.SceneManagement;
 public class Data
 {
     public readonly static Data Instance = new Data();
-    public int score = 0;
+    public float score = 0f;
 }
 public class ClockScript : MonoBehaviour
 {
     private int status;
     private Button StopButton;
+    private Button SysButton;
     private Text SetTimer;
     private Text ClockTimer;
     private Text CountTimerText;
-    private int CountTimer;
+    private float CountTimer;
     private AudioSource sound01;
     private AudioSource sound02;
     private AudioSource sound03;
@@ -38,10 +39,13 @@ public class ClockScript : MonoBehaviour
         status = 0;
         CountTimerText = GameObject.Find("CountTimer").GetComponent<Text>();
         StopButton = GameObject.Find("StartScene/StopButton").GetComponent<Button>();
+        SysButton = GameObject.Find("StartScene/SysWindowPopButton").GetComponent<Button>();
         ClockTimer = GameObject.Find("StartScene/Text").GetComponent<Text>();
         SetTimer = GameObject.Find("SetTimeCheck").GetComponent<Text>();
         StopButton.enabled = false;
         StopButton.interactable = false;
+        SysButton.enabled = true;
+        SysButton.interactable = true;
         //CountTimerText.SetActive(false);
     }
 
@@ -52,6 +56,8 @@ public class ClockScript : MonoBehaviour
         if (SetTimer.text == DateTime.Now.ToString("HH:mm"))
         {
             status = 1;
+            SysButton.enabled = false;
+            SysButton.interactable = false;
             StopButton.enabled = true;
             StopButton.interactable = true;
             SetTimer.text = "Start!";
@@ -60,9 +66,9 @@ public class ClockScript : MonoBehaviour
         }
         if (status == 1)
         {
-            CountTimer += 1;
-            CountTimerText.text = CountTimer.ToString();
-            if (CountTimer == 50)
+            CountTimer += 0.01f;
+            CountTimerText.text = CountTimer.ToString("f2");
+            if (CountTimer > 10f)
             {
                 status = 2;
                 sound02.Play();
@@ -70,9 +76,9 @@ public class ClockScript : MonoBehaviour
         }
         else if (status == 2)
         {
-            CountTimer += 1;
-            CountTimerText.text = CountTimer.ToString();
-            if (CountTimer == 100)
+            CountTimer += 0.01f;
+            CountTimerText.text = CountTimer.ToString("f2");
+            if (CountTimer > 20f)
             {
                 status = 3;
                 sound03.Play();
@@ -80,9 +86,9 @@ public class ClockScript : MonoBehaviour
         }
         else if (status == 3)
         {
-            CountTimer += 1;
-            CountTimerText.text = CountTimer.ToString();
-            if (CountTimer == 150)
+            CountTimer += 0.01f;
+            CountTimerText.text = CountTimer.ToString("f2");
+            if (CountTimer > 30f)
             {
  //               status = 4;
  //               SceneManager.LoadScene("ResultScene");
@@ -90,9 +96,9 @@ public class ClockScript : MonoBehaviour
         }
         else if (status == 98)
         {
-            CountTimer += 1;
-            CountTimerText.text = CountTimer.ToString();
-            if (CountTimer == 50)
+            CountTimer += 1f;
+            //CountTimerText.text = CountTimer.ToString();
+            if (CountTimer > 50)
             {
                 status = 99;
                 SceneManager.LoadScene("ResultScene");
@@ -108,8 +114,8 @@ public class ClockScript : MonoBehaviour
         status = 98;
         StopButton.enabled = false;
         StopButton.interactable = false;
-        CountTimerText.text = CountTimer.ToString();
-        Data.Instance.score = int.Parse(CountTimerText.text);
+        CountTimerText.text = CountTimer.ToString("f2");
+        Data.Instance.score = float.Parse(CountTimerText.text);
         CountTimer = 0;
     }
 }
