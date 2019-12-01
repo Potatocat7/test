@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 33250527}
   - component: {fileID: 33250526}
   - component: {fileID: 33250525}
-  m_Layer: 4
+  m_Layer: 10
   m_Name: EventSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -161,7 +161,7 @@ MonoBehaviour:
   m_Script: {fileID: -619905303, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 1482762310}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &33250527
@@ -191,7 +191,7 @@ GameObject:
   - component: {fileID: 681817899}
   - component: {fileID: 681817898}
   - component: {fileID: 681817897}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: StopButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -328,7 +328,7 @@ GameObject:
   - component: {fileID: 945701233}
   - component: {fileID: 945701232}
   - component: {fileID: 945701231}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: ResultScene
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -428,7 +428,7 @@ GameObject:
   - component: {fileID: 1122273597}
   - component: {fileID: 1122273599}
   - component: {fileID: 1122273598}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -505,7 +505,7 @@ GameObject:
   - component: {fileID: 1457642265}
   - component: {fileID: 1457642267}
   - component: {fileID: 1457642266}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: StartBackImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -576,7 +576,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1482762313}
   - component: {fileID: 1482762312}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -650,7 +650,7 @@ GameObject:
   - component: {fileID: 1729084577}
   - component: {fileID: 1729084580}
   - component: {fileID: 1729084579}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}

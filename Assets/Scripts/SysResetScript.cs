@@ -21,8 +21,8 @@ public class SysResetScript : MonoBehaviour
     //ボタン押下時
     public void OnClick()
     {
-        StopButton.enabled = true;
-        StopButton.interactable = true;
+        StopButton.enabled = false;
+        StopButton.interactable = false;
         GameObject.Find("SetTimeCheck").GetComponent<Text>().text = "";
         GameObject.Find("SysWindowCanvas").SetActive(false);
     }
