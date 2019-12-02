@@ -22,6 +22,7 @@ public class ClockScript : MonoBehaviour
     private AudioSource sound01;
     private AudioSource sound02;
     private AudioSource sound03;
+    private Animator CharaMotion;
 
     void Start()
     {
@@ -47,6 +48,8 @@ public class ClockScript : MonoBehaviour
         SysButton.enabled = true;
         SysButton.interactable = true;
         //CountTimerText.SetActive(false);
+        CharaMotion = GameObject.Find("StartBackImage/mark_free_t02").GetComponent<Animator>();
+        CharaMotion.SetInteger("changeFlag", 0);
     }
 
     // Update is called once per frame
@@ -63,6 +66,7 @@ public class ClockScript : MonoBehaviour
             SetTimer.text = "Start!";
             sound01.Play();
             //    CountTimerText.SetActive(true);
+            CharaMotion.SetInteger("changeFlag", 1);
         }
         if (status == 1)
         {
@@ -72,6 +76,7 @@ public class ClockScript : MonoBehaviour
             {
                 status = 2;
                 sound02.Play();
+                CharaMotion.SetInteger("changeFlag", 2);
             }
         }
         else if (status == 2)
@@ -82,6 +87,7 @@ public class ClockScript : MonoBehaviour
             {
                 status = 3;
                 sound03.Play();
+                CharaMotion.SetInteger("changeFlag", 3);
             }
         }
         else if (status == 3)
