@@ -47,7 +47,6 @@ public class ClockScript : MonoBehaviour
         StopButton.interactable = false;
         SysButton.enabled = true;
         SysButton.interactable = true;
-        //CountTimerText.SetActive(false);
         CharaMotion = GameObject.Find("StartBackImage/mark_free_t02").GetComponent<Animator>();
         CharaMotion.SetInteger("changeFlag", 0);
     }
@@ -65,7 +64,6 @@ public class ClockScript : MonoBehaviour
             StopButton.interactable = true;
             SetTimer.text = "Start!";
             sound01.Play();
-            //    CountTimerText.SetActive(true);
             CharaMotion.SetInteger("changeFlag", 1);
         }
         if (status == 1)
